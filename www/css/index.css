@@ -1,0 +1,351 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+
+@font-face {
+  font-family: "Digital-7 Regular";
+  src: url(../img/digital-7.ttf);
+}
+
+
+input[type=text] {
+ background-color:#2a2218; outline: none; border:none; font-size:1em;color:white; padding:0.3em;margin:0;
+}
+input[type=text]:focus {
+   outline: none;
+}
+
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+     -webkit-text-size-adjust: none;            /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#2a2218;
+    color:white;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:1em;
+    /*height:100%;*/
+    margin:0px;
+    padding:0px;
+    width:100%;
+	
+   text-align:center;
+}
+
+
+
+h1 {
+    font-size:1.5em;
+    font-weight:normal;
+    
+}
+
+
+
+
+
+
+#bluePage{ display:none;}
+#IntroPage {
+    text-align:center;
+    display:none;
+}
+#SpeedPage{ display:none;}
+#WorkoutmainPage{ display:none;}
+#PositionPage{ display:none;}
+
+
+
+
+
+ul {
+    list-style: none;
+    border-bottom: 1px solid #d3d3d3;
+    text-align: left;
+	list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+    margin-left: 0px;
+    padding: 1em;  
+    border-top: 1px solid #d3d3d3;
+    font-size: 1em;
+}
+
+
+
+#resultDiv {
+    font: 16px "Source Sans", helvetica, arial, sans-serif;
+    font-weight: 200;
+    display: block;
+    -webkit-border-radius: 6px;
+    width: 100%;
+    height: 140px;
+    text-align: left;
+    overflow: auto;
+}
+
+#statusDiv {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* ?????? */
+
+
+
+
+
+.fadein {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease-in;
+}
+
+.fadeout {
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-out;
+}
+
+/* iPhone 5s */
+@media screen and (device-aspect-ratio: 40/71) {
+    h1 {
+        font-size: 1.6em;
+        padding-top: 15px;
+    }
+
+    input[type=text] {
+        font-size: 0.5em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+select {
+font-size:1.2em;   
+   padding:3px 10px 3px 10px;
+    margin: 0.3em;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button {
+	    margin: 1em;
+  
+}
+
+
+
+
+.myButton {
+	
+	background-color:#a73f2d;
+	border:1px solid #241d13;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:1.2em;
+	font-weight:bold;
+	padding:0.9em 1.5em;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #7a2a1d;
+}
+
+.myButton:active {
+	/*border:2px solid green;*/
+	
+}
+.myButton:link {
+    
+}
+
+.myButton:visited {
+    
+}
+.myButton:focus {
+	outline: none;
+	/*background-color:#a73f2d;*/
+}
+.myButton:hover {
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slidecontainer {
+    width: 90%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 90%;
+	
+    height: 2px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+	border: 2px solid rgba(255,255,255,.5);
+	border-radius: 50%;
+    background: #2a2218;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 50%;
+	background: #2a2218;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
