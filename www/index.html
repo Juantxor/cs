@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+		<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+        <!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap: ; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+		<meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>ClimbingSeries</title>
+		
+		<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/bluetoothpage.js"></script>
+	<script type="text/javascript" src="js/userlogin.js"></script>
+	<script type="text/javascript" src="js/intropage.js"></script>
+	<script type="text/javascript" src="js/speedpage.js"></script>
+	<script type="text/javascript" src="js/workoutpage.js"></script>
+	<script type="text/javascript" src="js/workoutrunpage.js"></script>
+	<script type="text/javascript" src="js/workouteditpage.js"></script>
+
+		
+    </head>
+    <body>
+        <body onload="on_load_index();">
+
+<div id="loginPage">
+</div>    
+
+<div id="insertpasswordPage">
+</div>
+
+			
+<div id="bluePage">
+		<h1>Select bluetooth</h1>
+        <ul id="deviceList"></ul>
+		<button class="myButton"  id="refreshButton">Refresh</button>
+		<div id="statusDiv"></div>
+</div>
+			
+			
+			
+			
+			
+			
+			
+			
+<div id="IntroPage">
+<button class="myButton"  id="i_speedButton"    style="width:60%;">Speed Control<br><img src="img/speed_300_w.png" height="40" width="40" style="padding-top:10px;"></button>
+<button class="myButton"  id="i_workoutButton" style="width:60%;">Workout Timer<br><img src="img/chrono_300_w.png" height="40" width="40" style="padding-top:10px;"></button>
+<!--<button class="myButton"  id="i_positionButton" style="width:60%;">Position Sensor<br><img src="img/sensor_300_w.png" height="40" width="40" style="padding-top:10px;"></button>-->
+<button class="myButton"  id="i_logOutButton" style="width:60%;">Log Out<br><img src="img/logout_300_w.png" height="40" width="40" style="padding-top:10px;"></button>
+<button class="myButton"  id="disconnectButton" style="width:60%;">Disconnect<br><img src="img/disconnect_300_w.png" height="40" width="40" style="padding-top:10px;"></button>
+</div>
+			
+			
+			
+			
+			
+
+        
+		
+		
+		
+			
+			
+<div id="SpeedPage">
+<br>
+<br>
+<div>
+<span id="s_speed_less" style="font-size:6em;  font-family: 'Digital-7 Regular';">&lt; </span><span id="s_speed"  style="font-size: 6em;  font-family: 'Digital-7 Regular'; ">0</span><span style="font-size: 1em;  font-family: 'Digital-7 Regular';"> m/min</span>
+<span id="s_speed_more"style="font-size:6em;  font-family: 'Digital-7 Regular';"> &nbsp;&gt;</span>
+</div>
+<br>
+<div><span id="s_meters" style="font-size: 6em;  font-family: 'Digital-7 Regular';">0</span><span style="font-size: 1em;  font-family: 'Digital-7 Regular';"> m</span></div>
+<br>
+<div class="slidercontainer">
+<input id="s_slider" type="range" min="0" max="60" value="0" class="slider" >
+</div>
+<br>
+<div><button  id="s_reset_m" class="myButton" ><img src="img/reset_300_w.png" height="40" width="40" style="padding-top:10px;"></button></div>
+<div><button  id="s_voiceonoff"  class="myButton" ><img src="img/microphone_300_w.png" height="40" width="40" style="padding-top:10px;"></button></div>
+</div>		
+			
+			
+		
+
+
+
+
+
+
+<div id="WorkoutmainPage">
+	<div>
+	<button  id="w_create" class="myButton"  ><img src="img/chronoplus_300_w.png" height="40" width="40" style=""></button>
+	<button  id="w_saving" class="myButton"  style="position:relative;top:16px;padding:0.15em 0.8em;" ><img src="img/cloud_300_w.png" height="70" width="70" style=""></button>
+	</div>
+	
+<br>
+<br>
+<ul id="trackList"></ul>
+</div>	
+
+
+<div id="WorkoutEditPage">
+</div>
+
+<div id="WorkoutRunPage">
+</div>
+		
+			
+
+
+
+
+		
+	
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		
+		
+		
+		
+	
+     
+    </body>
+</html>
