@@ -149,17 +149,17 @@ function create_a_line(tname,values,ii){ //ii va a ser el ultimo de la triada //
 	
 	var theoric = calculate_meters(values);
 	var div3 = document.createElement('div');
-	div3.style.cssText="font-size: 2em;  font-family: 'Digital-7 Regular';padding-bottom:0.3em;";
+	div3.style.cssText="font-size: 2.5em;  font-family: 'Digital-7 Regular';padding-bottom:0.3em;";
 	var spanE = document.createElement('div'); spanE.innerHTML=values[0]; div3.appendChild(spanE); 
 	var spanF = document.createElement('div'); spanF.innerHTML=values[1]; div3.appendChild(spanF);
 	var spanG = document.createElement('div'); spanG.innerHTML=values[2]; div3.appendChild(spanG);
 	var spanH = document.createElement('div'); spanH.innerHTML=theoric.toFixed(2); div3.appendChild(spanH);
 
 
-	spanE.style.cssText="width:2.5em;display:inline-block;";
-	spanF.style.cssText="width:2.5em;display:inline-block;";
-	spanG.style.cssText="width:2em;display:inline-block;";
-	spanH.style.cssText="width:3em;display:inline-block;";
+	spanE.style.cssText="width:2em;display:inline-block;";//"width:2.5em;display:inline-block;";
+	spanF.style.cssText="width:2em;display:inline-block;";//"width:2.5em;display:inline-block;";
+	spanG.style.cssText="width:2em;display:inline-block;";//"width:2em;display:inline-block;";
+	spanH.style.cssText="width:2.5em;display:inline-block;";//"width:3em;display:inline-block;";
 	edit_div.appendChild(div3);
 
 	spanE.addEventListener(TOUCH_START,  function(){

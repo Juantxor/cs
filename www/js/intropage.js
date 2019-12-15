@@ -6,14 +6,14 @@ var activePage = "loginPage";//"bluetoothPage","introPage" "speedPage", "workout
 function ini_intropage(){
 	
     i_speedButton.addEventListener(TOUCH_START, showSpeedPage, false);
-	i_workoutButton.addEventListener(TOUCH_START, function(evt){showWorkoutmainPage(evt);}, false);
+	i_workoutButton.addEventListener(TOUCH_START, function(){showWorkoutmainPage();}, false);
 //i_positionButton.addEventListener(TOUCH_START, function(){}, false);//#TO    DOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 	i_logOutButton.addEventListener(TOUCH_START, function(){f_logout();  }, false);
 	disconnectButton.addEventListener(TOUCH_START, b_disconnect, false);
 	document.addEventListener("backbutton", onBackKeyDown, false);
 	
 	//para simular en chrome!!luego comentar!!#################COMMENT!!!!!!!!!!!!####################################################################################
-//registerBackButtonFake();
+registerBackButtonFake();
 }
 
 
@@ -78,9 +78,8 @@ SpeedPage.style.display="none";
 WorkoutmainPage.style.display="none";
 
 }	
-function showWorkoutmainPage(evt){
-console.log(evt);
-evt.preventDefault();
+function showWorkoutmainPage(){
+
 activePage = "workoutPage";
 /* alert(tracks);
 alert(typeof(tracks));
